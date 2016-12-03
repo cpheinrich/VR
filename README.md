@@ -1,5 +1,5 @@
 # SF VR Hackathon 2016
-- GitHub account for the team. For now the repo is private -- but we can also make it private.
+- GitHub account for the team. For now the repo is private -- but we can make it public if people want.
 
 ## Getting Started
 - Install Unity: https://unity3d.com/get-unity/download
