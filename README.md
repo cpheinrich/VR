@@ -2,4 +2,4 @@
 
 ## Getting Started
 - Install Unity
-- Download the GoogleVRForUnity.unitypackage: (https://developers.google.com/vr/unity/)[https://developers.google.com/vr/unity/]
+- Download the GoogleVRForUnity.unitypackage: https://developers.google.com/vr/unity/
