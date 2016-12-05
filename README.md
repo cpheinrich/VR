@@ -1,9 +1,11 @@
 # SF VR Hackathon 2016
-- For now the repo is private -- but we can make it public if people want.
+- Code from the VR Hackathon in SF on December 3-4.
+- We developed an application for Project Tango that measures length, width and height of some volume in the room from depth camera. The application then suggests furniture you can buy that fits within this volume of space. 
+- Our team "Goldibox: Furniture Fitter" won first place in the category of "Best AR app"
 
 ## Getting Started
 - Install Unity: https://unity3d.com/get-unity/download
 
-###SDK's
+### Tango SDK
 - https://developers.google.com/tango/downloads
-- The GoogleVRForUnity.unitypackage: https://developers.google.com/vr/unity/
+
