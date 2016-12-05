@@ -51,16 +51,11 @@ public class csvDB : MonoBehaviour {
         string s2 = Resources.Load("filename").ToString();
         //Instantiate(Resources.Load(s2));
         //Debug.Log(furniture);
-        loadModels(furniture);
-        /*
-        Dictionary<string,List<FurnitureData>> X = new Dictionary<string, List<FurnitureData>>();
-        string tag = "chair";
-        X.Add(tag, furniture);
-        Debug.Log(X[tag][0].name);
-        Debug.Log(X.ContainsKey("chair"));
-        Debug.Log(X.ContainsKey("bed"));
-        */
-        Dictionary<string, List<FurnitureData>> X = filterBySize(furniture,new Vector3(6f,6f,1.5f));
+        //loadModels(furniture);
+
+        //Dictionary<string, List<FurnitureData>> X = filterBySize(furniture,new Vector3(1.36f,1.91f,1.47f)); small
+        //Dictionary<string, List<FurnitureData>> X = filterBySize(furniture, new Vector3(2.72f, 1.91f, 3.21f));
+        Dictionary<string, List<FurnitureData>> X = filterBySize(furniture, new Vector3(0f,0f,0f));
         //Debug.Log(X["Chair"].Count);
         List<FurnitureData> temp = new List<FurnitureData>();
         Debug.Log(X.TryGetValue("Bed", out temp));
@@ -68,10 +63,14 @@ public class csvDB : MonoBehaviour {
         //temp = X["Chair"];
         List<string> keys2 = new List<string>(X.Keys);
         Debug.Log(keys2);
+        List<FurnitureData> newlist = new List<FurnitureData>();
         foreach(string s in keys2)
         {
             Debug.Log(s);
+            newlist.AddRange(X[s]);
+            
         }
+        loadModels(newlist);
 
 
 
@@ -92,7 +91,7 @@ public class csvDB : MonoBehaviour {
             FurnitureData f = fd[i];
             Debug.Log(f.name);
             //List<FurnitureData> temp = new List<FurnitureData>();
-            Vector3 scaledDims = f.dims * f.scale;
+            Vector3 scaledDims = f.dims;// * f.scale;
             Debug.Log(scaledDims);
             if (box.x > scaledDims.x && box.y > scaledDims.y && box.z > scaledDims.z)
             {
